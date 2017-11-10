@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 13:21:49 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/10 15:00:21 by pleroux          ###   ########.fr       */
+/*   Created: 2017/11/10 14:56:31 by pleroux           #+#    #+#             */
+/*   Updated: 2017/11/10 15:05:21 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,12 @@ static int		ft_strlen(char *s)
 	return (i);
 }
 
-size_t			ft_strlcat(char *dest, const char *src, size_t size)
+char		*ft_strrchr(const char *s, int c)
 {
-	size_t		i;
-	size_t		td;
-	size_t		ts;
+	size_t		t;
 
-	i = 0;
-	td = ft_strlen(dest);
-	ts = ft_strlen((char*)src);
-	if (td >= size)
-		return (size + ts);
-	while (td + i < size - 1)
-	{
-		dest[td + i] = src[i];
-		i++;
-	}
-	dest[td + i] = '\0';
-	return (td + ts);
+	t = ft_strlen((char*)s) - 1;
+	while (s && s[t] && s[t] != (char)c)
+		t--;
+	return ((char*)s + t);
 }

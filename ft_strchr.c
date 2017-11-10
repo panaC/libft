@@ -1,45 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 13:21:49 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/10 15:00:21 by pleroux          ###   ########.fr       */
+/*   Created: 2017/11/10 14:37:24 by pleroux           #+#    #+#             */
+/*   Updated: 2017/11/10 14:58:14 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-static int		ft_strlen(char *s)
+char		*strchr(const char *s, int c)
 {
-	int i;
-
-	i = 0;
-	if (!s)
-		return (0);
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-size_t			ft_strlcat(char *dest, const char *src, size_t size)
-{
-	size_t		i;
-	size_t		td;
+	char		*ret;
 	size_t		ts;
 
-	i = 0;
-	td = ft_strlen(dest);
-	ts = ft_strlen((char*)src);
-	if (td >= size)
-		return (size + ts);
-	while (td + i < size - 1)
-	{
-		dest[td + i] = src[i];
-		i++;
-	}
-	dest[td + i] = '\0';
-	return (td + ts);
+	ret = (char*)s;
+	ts = strlen(ret);
+	while(ret && *ret && *ret != (unsigned char)c)
+		ret++;
+	if (ret == (s + ts))
+		return (NULL);
+	return (ret);
 }
