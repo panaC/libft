@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:02:12 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/11 18:10:52 by pleroux          ###   ########.fr       */
+/*   Created: 2017/11/13 12:12:24 by pleroux           #+#    #+#             */
+/*   Updated: 2017/11/13 12:40:55 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char		*ft_strnew(size_t size)
 {
-	unsigned char	*ret;
-	unsigned char	*src_cpy;
-	size_t				i;
+	char		*ret;
 
-	i = 0;
-	ret = (unsigned char*)dest;
-	src_cpy = (unsigned char*)src;
-	while (i < n && (unsigned char)c != src_cpy[i])
-	{
-		ret[i] = src_cpy[i];
-		i++;
-	}
-	if (i == n)
+	ret = (char*)ft_memalloc(size + 1);
+	if (!ret)
 		return (NULL);
-	ret[i] = (unsigned char)c;
-	return (dest + i + 1);
+	return (ret);
+
 }

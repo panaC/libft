@@ -6,19 +6,17 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 10:36:58 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/10 10:37:12 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/13 14:49:38 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int		ft_strlen(char *s)
+size_t		ft_strlen(const char *s)
 {
-	int i;
+	size_t		i;
 
 	i = 0;
-	if (!s)
-		return (0);
 	while (s[i] != '\0')
 		i++;
 	return (i);

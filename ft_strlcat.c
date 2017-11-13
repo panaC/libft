@@ -6,23 +6,12 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 13:21:49 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/10 15:00:21 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/11 18:56:12 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-
-static int		ft_strlen(char *s)
-{
-	int i;
-
-	i = 0;
-	if (!s)
-		return (0);
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 size_t			ft_strlcat(char *dest, const char *src, size_t size)
 {

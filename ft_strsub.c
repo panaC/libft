@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:02:12 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/11 18:10:52 by pleroux          ###   ########.fr       */
+/*   Created: 2017/11/13 15:51:36 by pleroux           #+#    #+#             */
+/*   Updated: 2017/11/13 16:02:04 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char		*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*ret;
-	unsigned char	*src_cpy;
-	size_t				i;
+	char		*ret;
 
-	i = 0;
-	ret = (unsigned char*)dest;
-	src_cpy = (unsigned char*)src;
-	while (i < n && (unsigned char)c != src_cpy[i])
-	{
-		ret[i] = src_cpy[i];
-		i++;
-	}
-	if (i == n)
+	if (!s)
 		return (NULL);
-	ret[i] = (unsigned char)c;
-	return (dest + i + 1);
+	ret = ft_strnew(len);
+	if (!ret)
+		return (NULL);
+	ret = ft_strncpy(ret, s + start, len);
+	return (ret);
 }

@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:02:12 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/11 18:10:52 by pleroux          ###   ########.fr       */
+/*   Created: 2017/11/13 15:56:17 by pleroux           #+#    #+#             */
+/*   Updated: 2017/11/13 16:01:03 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char * ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned char	*ret;
-	unsigned char	*src_cpy;
-	size_t				i;
+	char		*ret;
 
-	i = 0;
-	ret = (unsigned char*)dest;
-	src_cpy = (unsigned char*)src;
-	while (i < n && (unsigned char)c != src_cpy[i])
-	{
-		ret[i] = src_cpy[i];
-		i++;
-	}
-	if (i == n)
+	if (!s1 || !s2)
 		return (NULL);
-	ret[i] = (unsigned char)c;
-	return (dest + i + 1);
+	ret = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
+	if (!ret)
+		return (NULL);
+	ft_strcat(ret, s1);
+	ft_strcat(ret, s2);
+	return (ret);
 }

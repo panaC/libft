@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 10:54:44 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/10 11:00:49 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/11 18:36:14 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char		*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	int		i;
+	size_t		i;
 
 	i = 0;
-	while (dest && src && src[i] && i < n)
+	while (src[i] && i < n)
 	{
 		dest[i] = src[i];
 		i++;

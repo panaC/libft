@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:02:12 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/11 18:10:52 by pleroux          ###   ########.fr       */
+/*   Created: 2017/11/13 12:02:43 by pleroux           #+#    #+#             */
+/*   Updated: 2017/11/13 12:42:06 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void		ft_memdel(void **ap)
 {
-	unsigned char	*ret;
-	unsigned char	*src_cpy;
-	size_t				i;
-
-	i = 0;
-	ret = (unsigned char*)dest;
-	src_cpy = (unsigned char*)src;
-	while (i < n && (unsigned char)c != src_cpy[i])
+	if(ap && *ap)
 	{
-		ret[i] = src_cpy[i];
-		i++;
+		free(*ap);
+		*ap = NULL;
 	}
-	if (i == n)
-		return (NULL);
-	ret[i] = (unsigned char)c;
-	return (dest + i + 1);
 }

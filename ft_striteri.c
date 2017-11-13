@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:02:12 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/11 18:10:52 by pleroux          ###   ########.fr       */
+/*   Created: 2017/11/13 13:02:13 by pleroux           #+#    #+#             */
+/*   Updated: 2017/11/13 13:10:49 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned char	*ret;
-	unsigned char	*src_cpy;
-	size_t				i;
+	unsigned int		i;
 
 	i = 0;
-	ret = (unsigned char*)dest;
-	src_cpy = (unsigned char*)src;
-	while (i < n && (unsigned char)c != src_cpy[i])
+	if (!s)
+		return ;
+	while (s[i])
 	{
-		ret[i] = src_cpy[i];
+		f(i, s + i);
 		i++;
 	}
-	if (i == n)
-		return (NULL);
-	ret[i] = (unsigned char)c;
-	return (dest + i + 1);
 }

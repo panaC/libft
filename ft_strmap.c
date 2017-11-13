@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:02:12 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/11 18:10:52 by pleroux          ###   ########.fr       */
+/*   Created: 2017/11/13 13:56:58 by pleroux           #+#    #+#             */
+/*   Updated: 2017/11/13 15:08:11 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char		*ft_strmap(char const *s, char (*f)(char))
 {
-	unsigned char	*ret;
-	unsigned char	*src_cpy;
-	size_t				i;
+	char		*ret;
+	size_t		i;
+	size_t		t;
 
+	if (!s)
+		return (NULL);
+	t = ft_strlen(s);
+	ret = (char*)ft_strnew(t);
+	if (!ret)
+		return (NULL);
 	i = 0;
-	ret = (unsigned char*)dest;
-	src_cpy = (unsigned char*)src;
-	while (i < n && (unsigned char)c != src_cpy[i])
+	while (i < t)
 	{
-		ret[i] = src_cpy[i];
+		ret[i] = f(s[i]);
 		i++;
 	}
-	if (i == n)
-		return (NULL);
-	ret[i] = (unsigned char)c;
-	return (dest + i + 1);
+	return (ret);
 }

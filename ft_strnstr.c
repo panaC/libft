@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:02:12 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/11 18:10:52 by pleroux          ###   ########.fr       */
+/*   Created: 2017/11/10 15:19:45 by pleroux           #+#    #+#             */
+/*   Updated: 2017/11/13 11:51:37 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char		*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	unsigned char	*ret;
-	unsigned char	*src_cpy;
-	size_t				i;
+	char	*m;
+	char	*s;
+	size_t	i;
+	size_t	j;
 
+	m = (char*)s1;
+	s = (char*)s2;
 	i = 0;
-	ret = (unsigned char*)dest;
-	src_cpy = (unsigned char*)src;
-	while (i < n && (unsigned char)c != src_cpy[i])
+	j = 0;
+	if (!*s)
+		return (m);
+	while (m[i] && i <= n)
 	{
-		ret[i] = src_cpy[i];
+		j = 0;
+		while (s[j] && s[j] == m[i + j] && (i + j) <= n)
+			j++;
+		if (s[j] == '\0')
+			return (m + i);
 		i++;
+
 	}
-	if (i == n)
-		return (NULL);
-	ret[i] = (unsigned char)c;
-	return (dest + i + 1);
+	return (NULL);
 }

@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:02:12 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/11 18:10:52 by pleroux          ###   ########.fr       */
+/*   Created: 2017/11/10 11:50:21 by pleroux           #+#    #+#             */
+/*   Updated: 2017/11/13 11:29:34 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char			*ft_strncat(char *dest, const char *src, size_t n)
 {
-	unsigned char	*ret;
-	unsigned char	*src_cpy;
-	size_t				i;
+	size_t		i;
+	size_t		j;
 
 	i = 0;
-	ret = (unsigned char*)dest;
-	src_cpy = (unsigned char*)src;
-	while (i < n && (unsigned char)c != src_cpy[i])
-	{
-		ret[i] = src_cpy[i];
+	j = 0;
+	while (dest[i])
 		i++;
+	while (src[j] && j < n)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	if (i == n)
-		return (NULL);
-	ret[i] = (unsigned char)c;
-	return (dest + i + 1);
+	dest[i] = '\0';
+	return (dest);
 }

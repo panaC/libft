@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:02:12 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/11 18:10:52 by pleroux          ###   ########.fr       */
+/*   Created: 2017/11/13 19:23:25 by pleroux           #+#    #+#             */
+/*   Updated: 2017/11/13 19:37:39 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+static int		len(n)
 {
-	unsigned char	*ret;
-	unsigned char	*src_cpy;
-	size_t				i;
+	int		len;
 
-	i = 0;
-	ret = (unsigned char*)dest;
-	src_cpy = (unsigned char*)src;
-	while (i < n && (unsigned char)c != src_cpy[i])
+	len = 0;
+	if(n < 0)
+		len++;
+	while (n > 0)
 	{
-		ret[i] = src_cpy[i];
-		i++;
+		n /= 10;
+		len++;
 	}
-	if (i == n)
+	return (len);
+}
+
+char * 			ft_itoa(int n)
+{
+	char		*ret;
+	size_t		len;
+
+	len = len(n);
+	if ((ret = ft_strnew(len)))
 		return (NULL);
-	ret[i] = (unsigned char)c;
-	return (dest + i + 1);
+	while ()
+
 }

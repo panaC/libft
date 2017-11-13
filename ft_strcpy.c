@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 10:41:11 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/10 10:46:27 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/11 18:27:39 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char		*ft_strcpy(char *dest, const char *src)
 	int		i;
 
 	i = 0;
-	while (dest && src && src[i])
+	while (src[i])
 	{
 		dest[i] = src[i];
 		i++;
