@@ -6,13 +6,13 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 19:59:54 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/13 20:08:20 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/13 20:16:00 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl(char const *s)
+void		ft_putendl(char const *s)
 {
 	ft_putendl_fd(s, 1);
 }

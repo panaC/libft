@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 20:01:07 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/13 20:03:06 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/13 20:14:39 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 void ft_putnbr(int n)
 {
-	char *prt;
-
-	prt = ft_itoa(n);
-	ft_putstr_fd(prt, 1);
-	free(prt);
+	ft_putnbr_fd(n, 1);
 }
