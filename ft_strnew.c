@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 12:12:24 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/13 12:40:55 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/15 13:10:08 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,4 @@ char		*ft_strnew(size_t size)
 	if (!ret)
 		return (NULL);
 	return (ret);
-
 }

@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:26:50 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/13 19:19:18 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/15 14:01:10 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,33 +15,33 @@
 
 static char	*shift_car(char const *s, char c)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	while (s[i] && s[i] == c)
 		i++;
-	return ((char*)s);
+	return ((char*)(s + i));
 }
 
 static int	nb_word(char const *s, char c)
 {
-	int count;
-	int i;
+	int			count;
+	char		*src;
 
 	count = 0;
-	i = 0;
-	while (s[i])
+	src = (char*)s;
+	while (*src)
 	{
-		if (s[i] == c || i == 0)
+		if (*src == c || src == s)
 		{
 			count++;
-			s = shift_car(s, c);
+			src = shift_car(src, c);
 		}
-		if (!s[i])
-			i++;
+		if (*src != '\0')
+			src++;
 	}
-	i--;
-	if (s[i] == c)
+	src--;
+	if (*src == c)
 		count--;
 	return (count);
 }
@@ -60,7 +60,7 @@ static char	**word_len(char const *s, int count, char **ret, char c)
 		p = (char*)s;
 		while (*s != c && *s)
 			s++;
-		if ((ret[i] = (char*)ft_memalloc(sizeof(char*) * ((s - p) + 1))))
+		if (!(ret[i] = (char*)ft_memalloc(sizeof(char*) * ((s - p) + 1))))
 			return (NULL);
 		j = 0;
 		while (p != s)
@@ -75,15 +75,17 @@ static char	**word_len(char const *s, int count, char **ret, char c)
 	return (ret);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	int			count;
 	char		**ret;
 
-	count = nb_word(s, c);
-	if ((ret = ft_memalloc(sizeof(char**) * (count + 1))))
+	if (!s)
 		return (NULL);
-	if ((ret = word_len(s, count, ret, c)))
+	count = nb_word(s, c);
+	if (!(ret = ft_memalloc(sizeof(char**) * (count + 1))))
+		return (NULL);
+	if (!(ret = word_len(s, count, ret, c)))
 		return (NULL);
 	return (ret);
 }

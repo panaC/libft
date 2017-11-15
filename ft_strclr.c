@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 12:47:24 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/13 12:58:37 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/15 10:36:08 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@
 void		ft_strclr(char *s)
 {
 	if (!s)
-		ft_bzero((void *)s, ft_strlen(s));
+		return ;
+	ft_bzero((void *)s, ft_strlen(s));
 }

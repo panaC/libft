@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:07:47 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/13 11:49:47 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/15 14:03:33 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ char		*ft_strstr(const char *s1, const char *s2)
 		if (s[j] == '\0')
 			return (m + i);
 		i++;
-
 	}
 	return (NULL);
 }

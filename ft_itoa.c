@@ -6,21 +6,21 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 19:23:25 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/13 19:57:22 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/15 13:55:07 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
 
-static int		len(n)
+static int		len(int n)
 {
 	int		len;
 
 	len = 0;
-	if(n < 0)
+	if (n <= 0)
 		len++;
-	while (n > 0)
+	while (n)
 	{
 		n /= 10;
 		len++;
@@ -28,24 +28,27 @@ static int		len(n)
 	return (len);
 }
 
-char * 			ft_itoa(int n)
+char			*ft_itoa(int n)
 {
-	char		*ret;
-	int			l;
-	int			neg;
+	char			*ret;
+	size_t			l;
+	unsigned int	nb;
+	int				i;
 
+	nb = (unsigned int)n;
 	if (n < 0)
-		neg = 1;
+		nb *= -1;
 	l = len(n);
-	if ((ret = ft_strnew(l)))
+	if (!(ret = ft_strnew(l)))
 		return (NULL);
-	while (l >= 0)
+	i = (int)l - 1;
+	while ((i && n < 0) || (n >= 0 && i >= 0))
 	{
-		ret[l] = n % 10;
-		n /= 10;
-		l--;
+		ret[i] = (nb % 10) + '0';
+		nb /= 10;
+		i--;
 	}
-	if (neg)
-		ret[0] = '-';
+	if (n < 0)
+		ret[i] = '-';
 	return (ret);
 }

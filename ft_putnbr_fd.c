@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 20:03:28 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/13 20:15:55 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/15 08:43:15 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,15 @@
 
 void		ft_putnbr_fd(int n, int fd)
 {
-	char *prt;
+	unsigned int	nb;
 
-	prt = ft_itoa(n);
-	ft_putstr_fd(prt, fd);
-	free(prt);
+	nb = (unsigned int)n;
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nb *= -1;
+	}
+	if (nb > 9)
+		ft_putnbr_fd((nb / 10), fd);
+	ft_putchar_fd(((nb % 10) + '0'), fd);
 }

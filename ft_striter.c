@@ -6,15 +6,15 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 12:59:14 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/13 13:01:50 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/15 13:56:45 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void ft_striter(char *s, void (*f)(char *))
+void		ft_striter(char *s, void (*f)(char *))
 {
-	if (!s)
+	if (!s || !f)
 		return ;
 	while (*s)
 	{

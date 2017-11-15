@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:02:12 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/11 18:10:52 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/15 13:07:07 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	unsigned char	*ret;
 	unsigned char	*src_cpy;
-	size_t				i;
+	size_t			i;
 
 	i = 0;
 	ret = (unsigned char*)dest;

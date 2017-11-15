@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 12:43:00 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/13 12:46:24 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/13 20:23:51 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <unistd.h>
 #include "libft.h"
 
-void ft_strdel(char **as)
+void		ft_strdel(char **as)
 {
 	ft_memdel((void*)as);
 }
