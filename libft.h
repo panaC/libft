@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/15 20:14:24 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/16 10:03:59 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 typedef struct		s_list
 {
-	void *content;
-	size_t content_size;
-	struct s_list *next;
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
 }					t_list;
 
 void				*ft_memset (void *s, int c, size_t n);
@@ -83,12 +83,6 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_putlst(t_list *l);
-
-
-
-
-
-
 void				*ft_memdup(const void *mem, size_t size);
 int					ft_isspace(int c);
 void				ft_lstaddtoend(t_list **alst, t_list *new);

@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstaddtoend.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 15:19:07 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/16 10:00:31 by pleroux          ###   ########.fr       */
+/*   Created: 2017/11/15 20:02:53 by pleroux           #+#    #+#             */
+/*   Updated: 2017/11/15 20:12:52 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
 
-void		*ft_memdup(const void *mem, size_t size)
+void		ft_lstaddtoend(t_list **alst, t_list *new)
 {
-	void		*out;
+	t_list		*t;
 
-	if (!(out = (void*)ft_memalloc(size)))
-		return (NULL);
-	ft_memcpy(out, mem, size);
-	return (out);
+	if (alst && *alst && new)
+	{
+		t = *alst;
+		while (t->next)
+			t = t->next;
+		t->next = new;
+		t->next->next = NULL;
+	}
+	if (!(*alst))
+	{
+		*alst = new;
+		(*alst)->next = NULL;
+	}
 }

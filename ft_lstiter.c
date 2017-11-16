@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 15:19:07 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/16 10:00:31 by pleroux          ###   ########.fr       */
+/*   Created: 2017/11/15 17:22:38 by pleroux           #+#    #+#             */
+/*   Updated: 2017/11/15 17:25:26 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
 
-void		*ft_memdup(const void *mem, size_t size)
+void		ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	void		*out;
+	t_list		*t;
 
-	if (!(out = (void*)ft_memalloc(size)))
-		return (NULL);
-	ft_memcpy(out, mem, size);
-	return (out);
+	t = lst;
+	while (t)
+	{
+		f(t);
+		t = t->next;
+	}
 }
