@@ -6,11 +6,10 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 10:38:31 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/13 14:09:38 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/16 12:30:27 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdlib.h>
 #include "libft.h"
 

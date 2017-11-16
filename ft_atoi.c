@@ -6,11 +6,10 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 18:11:58 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/15 12:11:50 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/16 12:12:08 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 int		ft_atoi(const char *nptr)

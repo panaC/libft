@@ -6,11 +6,10 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:26:50 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/15 14:01:10 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/16 12:35:40 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 static char	*shift_car(char const *s, char c)

@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/16 11:05:15 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/16 12:15:44 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 # include <string.h>
-# include <unistd.h>
 
 typedef struct		s_list
 {
@@ -50,6 +49,8 @@ int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+int					ft_islower(int c);
+int					ft_isupper(int c);
 int					ft_isprint(int c);
 int					ft_isnum(int c);
 char				*ft_strnew(size_t size);

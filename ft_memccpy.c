@@ -6,13 +6,13 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:02:12 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/15 13:07:07 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/16 12:21:24 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void		*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	unsigned char	*ret;
 	unsigned char	*src_cpy;

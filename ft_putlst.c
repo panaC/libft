@@ -6,11 +6,12 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 18:23:27 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/15 18:29:32 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/16 12:26:28 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <unistd.h>
 #include "libft.h"
 
 void		ft_putlst(t_list *l)

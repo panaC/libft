@@ -6,11 +6,9 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 13:02:13 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/15 13:57:07 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/16 12:31:24 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <string.h>
 
 void		ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

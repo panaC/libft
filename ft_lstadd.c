@@ -6,11 +6,10 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 16:20:30 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/15 20:14:52 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/16 12:18:35 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void		ft_lstadd(t_list **alst, t_list *new)

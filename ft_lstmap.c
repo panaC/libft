@@ -6,11 +6,10 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 17:26:23 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/15 20:13:09 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/16 12:20:15 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))

@@ -6,12 +6,11 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:43:34 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/13 15:07:49 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/11/16 12:32:35 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <unistd.h>
 #include "libft.h"
 
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
