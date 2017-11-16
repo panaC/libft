@@ -6,7 +6,7 @@
 #    By: pleroux <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 20:45:55 by pleroux           #+#    #+#              #
-#    Updated: 2017/11/16 10:41:52 by pleroux          ###   ########.fr        #
+#    Updated: 2017/11/16 12:47:09 by pleroux          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,6 +78,8 @@ SOURCE= ft_atoi.c			\
 		ft_strtrim.c			\
 		ft_tolower.c			\
 		ft_toupper.c			\
+		ft_islower.c			\
+		ft_isupper.c			\
 
 OBJECT=$(SOURCE:.c=.o)
 
