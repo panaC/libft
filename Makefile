@@ -6,7 +6,7 @@
 #    By: pleroux <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 20:45:55 by pleroux           #+#    #+#              #
-#    Updated: 2017/11/16 10:18:39 by pleroux          ###   ########.fr        #
+#    Updated: 2017/11/16 10:41:52 by pleroux          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,12 +83,12 @@ OBJECT=$(SOURCE:.c=.o)
 
 all: $(NAME)
 
-$(NAME): libft.o
+$(NAME): $(OBJECT)
 	ar rc $(NAME) $(OBJECT)
 	ranlib $(NAME)
 
-libft.o:
-	$(CC) -c $(SOURCE) -I $(INCLUDE) $(CFLAGS)
+%.o: %.c
+	$(CC) -o $@ -c $< -I $(INCLUDE) $(CFLAGS)
 
 fclean: clean
 	/bin/rm -f $(NAME)
