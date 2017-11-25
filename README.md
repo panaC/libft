@@ -1,6 +1,6 @@
-## 42 - LibFT
+# 42 - LibFT
 
-# Utilisation
+## Utilisation
 
 ```c
 #include "libft.h"
@@ -8,6 +8,6 @@
 
 > Compile with libft.a
 
-# Documentation
+## Documentation
 
 
