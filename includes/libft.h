@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/16 14:37:21 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/12/06 13:22:40 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,14 @@
 # define LIBFT_H
 
 # include <string.h>
+
+# define TRUE		1
+# define FALSE		0
+
+typedef unsigned char	t_uint8;
+typedef unsigned short	t_uint16;
+typedef unsigned int	t_uint32;
+typedef unsigned long	t_uint64;
 
 typedef struct		s_list
 {
@@ -88,5 +96,8 @@ void				*ft_memdup(const void *mem, size_t size);
 int					ft_isspace(int c);
 void				ft_lstaddtoend(t_list **alst, t_list *new);
 size_t				ft_lstlen(t_list *l);
+int					ft_atoi_base(char c, const char *str);
+char				*ft_itoa_base(unsigned int value, int base, char *basestr);
+void				ft_print_memory(const void *addr, size_t size);
 
 #endif
