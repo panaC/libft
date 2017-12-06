@@ -6,7 +6,7 @@
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 12:58:48 by pleroux           #+#    #+#             */
-/*   Updated: 2017/12/06 12:59:00 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/12/06 13:52:51 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void		ft_print_memory(const void *addr, size_t size)
 	while (curline * 16 < size)
 	{
 		make_hexs(tmp, curline, size);
-		ft_putchar(' ');
+		ft_putstr("  ");
 		i = 0;
 		while (i < 16)
 		{

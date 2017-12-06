@@ -6,7 +6,7 @@
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 11:46:01 by pleroux           #+#    #+#             */
-/*   Updated: 2017/12/06 11:48:40 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/12/06 13:40:49 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,14 @@ size_t	ft_intlen_base(unsigned int n, int base)
 	return (i);
 }
 
-char		*ft_itoa_base(unsigned int value, int base, char *basestr)
+char		*ft_itoa_base(unsigned int value, char *basestr)
 {
 	size_t			size;
 	size_t			i;
+	size_t			base;
 	char			*tmp;
 
+	base = ft_strlen(basestr);
 	size = ft_intlen_base(value, base);
 	if (!(tmp = (char*)ft_memalloc(sizeof(char) * size + 1)))
 		return (NULL);
