@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2017/12/18 15:42:57 by pierre           ###   ########.fr       */
+/*   Updated: 2017/12/18 16:26:16 by pierre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,6 @@ int					ft_atoi_base(const char *nptr, const char *base);
 char				*ft_itoa_base(unsigned int value, char *basestr);
 void				ft_print_memory(const void *addr, size_t size);
 int					ft_nb_split(char const *s, char c);
+t_string			ft_strccat(t_string s, char c);
 
 #endif
