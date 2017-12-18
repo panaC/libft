@@ -6,9 +6,11 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 16:17:32 by pierre            #+#    #+#             */
-/*   Updated: 2017/12/18 16:32:06 by pierre           ###   ########.fr       */
+/*   Updated: 2017/12/18 17:03:19 by pierre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../../includes/libft.h"
 
 t_string			ft_strccat(t_string s, char c)
 {
