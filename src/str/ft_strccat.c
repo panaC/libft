@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 16:17:32 by pierre            #+#    #+#             */
-/*   Updated: 2017/12/18 18:00:20 by pierre           ###   ########.fr       */
+/*   Updated: 2017/12/18 18:13:36 by pierre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ t_string			ft_strccat(t_string s, char c)
 	t_string		ptr;
 	size_t			size;
 
-	if
 	size = ft_strlen(s);
 	if ((!(ptr = ft_memalloc(size + 2))))
 		return (NULL);
