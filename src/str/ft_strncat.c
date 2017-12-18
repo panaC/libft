@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:50:21 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/13 11:29:34 by pleroux          ###   ########.fr       */
+/*   Updated: 2017/12/18 17:59:00 by pierre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char			*ft_strncat(char *dest, const char *src, size_t n)
 	j = 0;
 	while (dest[i])
 		i++;
-	while (src[j] && j < n)
+	while (j < n && src[j])
 	{
 		dest[i] = src[j];
 		i++;
