@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2017/12/18 16:26:16 by pierre           ###   ########.fr       */
+/*   Updated: 2017/12/18 17:16:13 by pierre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # define TRUE		1
 # define FALSE		0
 
+typedef unsigned int	t_bool;
 typedef unsigned char	t_uint8;
 typedef unsigned short	t_uint16;
 typedef unsigned int	t_uint32;
