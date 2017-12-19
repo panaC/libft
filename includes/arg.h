@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 15:37:07 by pierre            #+#    #+#             */
-/*   Updated: 2017/12/19 10:53:14 by pierre           ###   ########.fr       */
+/*   Updated: 2017/12/19 17:11:35 by pierre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ typedef struct				s_arg
 	t_bool					state;
 }							t_arg;
 
-t_arg			*ft_get_arg(int ac, char **argv);
-
+t_arg			*ft_get_arg(int ac, char **argv);t_string		ft_getarg_data(t_list *n);
+t_string		ft_getparam_data(t_list *n);
+t_bool			ft_setparam_int(t_arg *a, char *s, int *ptr, int data);
+t_bool			ft_setparam_doubleint(t_arg *a, char *s, int *ptr, int data, int i);
+t_bool			ft_setparam_hex(t_arg *a, char *s, int *ptr, int data);
 #endif
