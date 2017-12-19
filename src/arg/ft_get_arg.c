@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 15:30:27 by pierre            #+#    #+#             */
-/*   Updated: 2017/12/19 10:52:24 by pierre           ###   ########.fr       */
+/*   Updated: 2017/12/19 11:23:29 by pierre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static t_bool			is_present_short_param(t_string s, char c)
 {
-	int			i;
+	size_t			i;
 
 	if (!s)
 		return (FALSE);
