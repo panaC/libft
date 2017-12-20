@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 14:56:00 by pierre            #+#    #+#             */
-/*   Updated: 2017/12/19 16:52:25 by pierre           ###   ########.fr       */
+/*   Updated: 2017/12/20 11:20:13 by pierre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ t_bool		ft_lststrfind(t_list *l, t_list **r, t_string s)
 	{
 		if (ft_strstr((t_string)l->content, s))
 		{
-			*r = l;
+			if (r)
+				*r = l;
 			return (TRUE);
 		}
 		l = l->next;
