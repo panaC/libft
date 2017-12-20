@@ -6,7 +6,7 @@
 #    By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/25 16:44:48 by pleroux           #+#    #+#              #
-#    Updated: 2017/11/25 17:19:35 by pleroux          ###   ########.fr        #
+#    Updated: 2017/12/20 09:57:17 by pierre           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ INC_DIR=./includes
 OBJ_DIR=./obj
 
 RAW_SRC		:= $(shell find $(SRC_DIR) -type f | grep -E "\.c$$")
-RAW_DIRS	:= $(shell find $(SRC_DIR) -type d -mindepth 1)
+RAW_DIRS	:= $(shell find $(SRC_DIR) -mindepth 1 -type d )
 SRCDIRS 	= $(RAW_DIRS:./src/%=%)
 SRC			= $(RAW_SRC:./src/%=%)
 OBJ			= $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
