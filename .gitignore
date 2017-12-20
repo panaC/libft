@@ -1,5 +1,5 @@
 *~*
-.test*
+*.swp
 *.test*
 *.a
 *.o
