@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2017/12/19 15:21:52 by pierre           ###   ########.fr       */
+/*   Updated: 2017/12/20 12:33:34 by pierre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,5 +104,6 @@ void				ft_print_memory(const void *addr, size_t size);
 int					ft_nb_split(char const *s, char c);
 t_string			ft_strccat(t_string s, char c);
 t_bool				ft_lststrfind(t_list *l, t_list **r, t_string s);
+int					ft_abs(int n);
 
 #endif
