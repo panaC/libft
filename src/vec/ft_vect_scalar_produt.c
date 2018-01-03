@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 09:22:23 by pierre            #+#    #+#             */
-/*   Updated: 2017/12/20 09:23:05 by pierre           ###   ########.fr       */
+/*   Updated: 2018/01/03 18:38:56 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int					ft_vect_scalar_product(t_vect *v1, t_vect *v2)
 {
-	return(v1->x * v2->x + v1->y * v2->y + v1->z * v2->z);
+	return (v1->x * v2->x + v1->y * v2->y + v1->z * v2->z);
 }
-

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_arg.c                                          :+:      :+:    :+:   */
+/*   ft_get_arg.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 15:30:27 by pierre            #+#    #+#             */
-/*   Updated: 2017/12/19 15:41:39 by pierre           ###   ########.fr       */
+/*   Updated: 2018/01/03 18:43:55 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,13 @@ static t_bool			get_short_param(t_arg *a, t_string s)
 
 static t_bool			get_long_param(t_arg *a, t_string s)
 {
-	if (!s || s[0] == '\0'|| s[0] == '-')
+	if (!s || s[0] == '\0' || s[0] == '-')
 		return (FALSE);
 	ft_lstaddtoend(&(a->long_param), ft_lstnew((void*)s, ft_strlen(s)));
 	return (TRUE);
 }
 
-t_arg			*ft_get_arg(int ac, char **av)
+t_arg					*ft_get_arg(int ac, char **av)
 {
 	t_arg		*ret;
 	t_bool		state;

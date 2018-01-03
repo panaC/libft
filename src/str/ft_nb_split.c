@@ -6,13 +6,13 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 15:31:45 by pierre            #+#    #+#             */
-/*   Updated: 2017/12/12 15:35:54 by pierre           ###   ########.fr       */
+/*   Updated: 2018/01/03 18:41:10 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-static char	*shift_car(char const *s, char c)
+static char		*shift_car(char const *s, char c)
 {
 	int		i;
 

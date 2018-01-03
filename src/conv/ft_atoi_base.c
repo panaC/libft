@@ -6,7 +6,7 @@
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 11:31:31 by pleroux           #+#    #+#             */
-/*   Updated: 2017/12/06 13:34:11 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/03 18:36:26 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	inc(char c, const char *str)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	while (str[i] && str[i] != c)

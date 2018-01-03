@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 17:10:59 by pierre            #+#    #+#             */
-/*   Updated: 2018/01/03 15:30:41 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/03 18:32:10 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ t_bool			ft_setparam_hex(t_arg *a, char *s, int *ptr, int data)
 {
 	t_list		*tmp;
 	t_string	str;
+
 	if (ft_lststrfind(a->long_param, &tmp, s))
 	{
 		str = ft_getparam_data(tmp);

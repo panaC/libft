@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 09:43:50 by pierre            #+#    #+#             */
-/*   Updated: 2017/12/20 09:44:47 by pierre           ###   ########.fr       */
+/*   Updated: 2018/01/03 18:29:13 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string.h>
 #include <matrix.h>
 
-t_matrix			*ft_mtx_new()
+t_matrix			*ft_mtx_new(void)
 {
 	t_matrix		*ret;
 

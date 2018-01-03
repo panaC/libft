@@ -6,13 +6,13 @@
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 11:46:01 by pleroux           #+#    #+#             */
-/*   Updated: 2017/12/06 13:40:49 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/03 18:40:43 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-size_t	ft_intlen_base(unsigned int n, int base)
+size_t		ft_intlen_base(unsigned int n, int base)
 {
 	size_t			i;
 
@@ -45,4 +45,3 @@ char		*ft_itoa_base(unsigned int value, char *basestr)
 	}
 	return (tmp);
 }
-

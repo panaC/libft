@@ -6,13 +6,13 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 09:21:13 by pierre            #+#    #+#             */
-/*   Updated: 2017/12/20 09:22:06 by pierre           ###   ########.fr       */
+/*   Updated: 2018/01/03 18:39:31 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <vector.h>
 
-t_vect*				ft_vect_unit(t_vect *v)
+t_vect				*ft_vect_unit(t_vect *v)
 {
 	double			norm;
 
