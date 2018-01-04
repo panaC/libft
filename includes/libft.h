@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2017/12/20 12:33:34 by pierre           ###   ########.fr       */
+/*   Updated: 2018/01/04 13:41:13 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ int					ft_isspace(int c);
 void				ft_lstaddtoend(t_list **alst, t_list *new);
 size_t				ft_lstlen(t_list *l);
 int					ft_atoi_base(const char *nptr, const char *base);
+t_uint32			ft_atoi_hex(const char *s);
 char				*ft_itoa_base(unsigned int value, char *basestr);
 void				ft_print_memory(const void *addr, size_t size);
 int					ft_nb_split(char const *s, char c);

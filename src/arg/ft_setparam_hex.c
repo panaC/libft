@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 17:10:59 by pierre            #+#    #+#             */
-/*   Updated: 2018/01/03 18:32:10 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/04 14:41:16 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_bool			ft_setparam_hex(t_arg *a, char *s, int *ptr, int data)
 			*ptr = data;
 			return (TRUE);
 		}
-		*ptr = ft_atoi_base(str, "0123456789ABCDEF");
+		*ptr = ft_atoi_hex(str);
 	}
 	else
 		*ptr = data;
