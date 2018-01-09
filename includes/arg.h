@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 15:37:07 by pierre            #+#    #+#             */
-/*   Updated: 2018/01/09 18:03:04 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/09 19:59:07 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ t_bool			ft_setparam_hex(t_arg *a, t_string s, t_uint32 *ptr,
 void			ft_freearg(t_arg **a);
 t_bool			ft_check_longparam(t_list *src, t_list *arg, t_bool del);
 t_bool			ft_search_param(t_list *l, t_string *r, t_string s);
+t_bool			ft_check_shortparam(t_string param, char c);
 #endif
