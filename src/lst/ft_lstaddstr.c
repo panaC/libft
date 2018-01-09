@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getarg_data.c                                   :+:      :+:    :+:   */
+/*   ft_lstaddstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
+/*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/19 15:03:17 by pierre            #+#    #+#             */
-/*   Updated: 2017/12/19 16:52:52 by pierre           ###   ########.fr       */
+/*   Created: 2018/01/09 15:30:43 by pleroux           #+#    #+#             */
+/*   Updated: 2018/01/09 15:58:55 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-t_string		ft_getparam_data(t_list *n)
+void		ft_lstaddstr(t_list **alst, t_string s)
 {
-	char		**s;
-
-	if (!n)
-		return (NULL);
-	s = ft_strsplit((char*)n->content, '=');
-	if (s[0] && s[1])
-		return (s[1]);
-	return (NULL);
+	ft_lstadd(alst, ft_lstnew(s, ft_strlen(s) + 1));
 }

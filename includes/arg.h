@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 15:37:07 by pierre            #+#    #+#             */
-/*   Updated: 2018/01/09 11:53:40 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/09 18:03:04 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,12 @@ typedef struct	s_arg
 }				t_arg;
 
 t_arg			*ft_get_arg(int ac, char **argv);
-t_string		ft_getarg_data(t_list *n);
-t_string		ft_getparam_data(t_list *n);
-t_bool			ft_setparam_int(t_arg *a, char *s, int *ptr, int data);
-t_bool			ft_setparam_doubleint(t_arg *a, char *s, int *ptr, int data);
-t_bool			ft_setparam_hex(t_arg *a, char *s, t_uint32 *ptr,
+t_string		ft_split_longparam(t_string n, int num, t_bool del);
+t_bool			ft_setparam_int(t_arg *a, t_string s, int *ptr, int data);
+t_bool			ft_setparam_doubleint(t_arg *a, t_string s, int *ptr, int data);
+t_bool			ft_setparam_hex(t_arg *a, t_string s, t_uint32 *ptr,
 		t_uint32 data);
 void			ft_freearg(t_arg **a);
+t_bool			ft_check_longparam(t_list *src, t_list *arg, t_bool del);
+t_bool			ft_search_param(t_list *l, t_string *r, t_string s);
 #endif

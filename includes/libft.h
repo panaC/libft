@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2018/01/04 21:13:02 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/09 15:35:11 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,10 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstaddstr(t_list **alst, t_string s);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_bool				ft_lststrfind(t_list *l, char **r, t_string s);
 void				ft_putlst(t_list *l);
 void				*ft_memdup(const void *mem, size_t size);
 int					ft_isspace(int c);
@@ -104,7 +106,6 @@ char				*ft_itoa_base(unsigned int value, char *basestr);
 void				ft_print_memory(const void *addr, size_t size);
 int					ft_nb_split(char const *s, char c);
 t_string			ft_strccat(t_string s, char c);
-t_bool				ft_lststrfind(t_list *l, t_list **r, t_string s);
 int					ft_abs(int n);
 
 #endif

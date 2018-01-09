@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lststrfind.c                                    :+:      :+:    :+:   */
+/*   ft_search_param.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
+/*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/19 14:56:00 by pierre            #+#    #+#             */
-/*   Updated: 2018/01/09 16:40:45 by pleroux          ###   ########.fr       */
+/*   Created: 2018/01/09 16:52:22 by pleroux           #+#    #+#             */
+/*   Updated: 2018/01/09 19:36:00 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
+#include <arg.h>
 
-t_bool		ft_lststrfind(t_list *l, char **r, t_string s)
+t_bool			ft_search_param(t_list *l, t_string *r, t_string s)
 {
-	if (!l || !s || !l->content)
+	t_string	tmp;
+
+	if (!(l || s || l->content))
 		return (FALSE);
 	while (l)
 	{
-		if (ft_strcmp((t_string)l->content, s) == 0)
+		tmp = ft_split_longparam((t_string)l->content, 0, FALSE);
+		if (ft_strcmp(tmp, s) == 0)
 		{
 			if (r)
 				*r = ft_strdup((t_string)l->content);
+			ft_memdel((void**)&tmp);
 			return (TRUE);
 		}
+		ft_memdel((void**)&tmp);
 		l = l->next;
 	}
 	return (FALSE);
