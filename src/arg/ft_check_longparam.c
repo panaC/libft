@@ -6,23 +6,27 @@
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/09 15:41:36 by pleroux           #+#    #+#             */
-/*   Updated: 2018/01/11 11:34:56 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/11 21:54:51 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 #include <arg.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 static void		d(void *a, size_t s)
 {
 	s = 0;
-	ft_memdel(&a);
+	free(a);
 }
 
 t_bool			ft_check_longparam(t_list *arg, t_list *src, t_bool del)
 {
 	size_t		nb;
+	t_list		*l;
 
+	l = src;
 	nb = 0;
 	while (src)
 	{
@@ -31,6 +35,6 @@ t_bool			ft_check_longparam(t_list *arg, t_list *src, t_bool del)
 		src = src->next;
 	}
 	if (del)
-		ft_lstdel(&src, d);
+		ft_lstdel(&l, d);
 	return (nb == ft_lstlen(arg));
 }

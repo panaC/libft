@@ -6,7 +6,7 @@
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/04 11:17:52 by pleroux           #+#    #+#             */
-/*   Updated: 2018/01/09 11:54:48 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/11 21:43:08 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_uint32			ft_atoi_hex(const char *str)
 {
 	t_uint32		res;
 	size_t			i;
-	char			*s;
+	t_string		s;
 
 	if (!str)
 		return (0);
@@ -37,6 +37,6 @@ t_uint32			ft_atoi_hex(const char *str)
 	else
 		return (0);
 	res = (t_uint32)ft_atoi_base(s + i, "0123456789ABCDEF");
-	ft_memdel((void**)&(s));
+	ft_memdel((void**)&s);
 	return (res);
 }

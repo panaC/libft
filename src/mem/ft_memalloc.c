@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 11:56:10 by pleroux           #+#    #+#             */
-/*   Updated: 2017/11/15 13:53:37 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/11 21:13:22 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void		*ft_memalloc(size_t size)
 {
 	unsigned char		*ret;
 
+	if (size > 2147483648)
+		return (NULL);
 	ret = (unsigned char*)malloc(size);
 	if (!ret)
 		return (NULL);
