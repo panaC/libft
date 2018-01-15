@@ -6,13 +6,14 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 15:03:17 by pierre            #+#    #+#             */
-/*   Updated: 2018/01/11 21:53:15 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/15 17:42:25 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 #include <arg.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 t_string		ft_split_longparam(t_string n, int num, t_bool del)
 {
@@ -28,10 +29,10 @@ t_string		ft_split_longparam(t_string n, int num, t_bool del)
 	else if (s[0] && s[1] && num == 1)
 		ret = ft_strdup(s[1]);
 	num = 0;
-	while (s[num])
-		ft_memdel((void**)&(s[num]));
+	while (s && s[num])
+		ft_memdel((void**)&(s[num++]));
 	free(s);
 	if (del)
-		ft_memdel((void**)&n);
+		free(n);
 	return (ret);
 }
