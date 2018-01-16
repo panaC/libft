@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 15:30:27 by pierre            #+#    #+#             */
-/*   Updated: 2018/01/03 18:43:55 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/16 15:52:48 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static t_bool			get_long_param(t_arg *a, t_string s)
 {
 	if (!s || s[0] == '\0' || s[0] == '-')
 		return (FALSE);
-	ft_lstaddtoend(&(a->long_param), ft_lstnew((void*)s, ft_strlen(s)));
+	ft_lstaddtoend(&(a->long_param), ft_lstnew((void*)s, ft_strlen(s) + 1));
 	return (TRUE);
 }
 
@@ -73,7 +73,7 @@ t_arg					*ft_get_arg(int ac, char **av)
 			state = get_short_param(ret, av[i] + 1);
 		else
 			ft_lstaddtoend(&(ret->data_param),
-					ft_lstnew((void*)av[i], ft_strlen(av[i])));
+					ft_lstnew((void*)av[i], ft_strlen(av[i]) + 1));
 		++i;
 	}
 	ret->state = state;

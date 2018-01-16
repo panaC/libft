@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 15:03:17 by pierre            #+#    #+#             */
-/*   Updated: 2018/01/15 17:42:25 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/16 15:45:02 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,10 @@ t_string		ft_split_longparam(t_string n, int num, t_bool del)
 	if (!n)
 		return (ret);
 	s = ft_strsplit(n, '=');
-	if (s[0] && num == 0)
+	printf("    strlen s[0] %s %zu : string origi %s\n", s[0], ft_strlen(s[0]), n);
+	if (s && s[0] && num == 0)
 		ret = ft_strdup(s[0]);
-	else if (s[0] && s[1] && num == 1)
+	else if (s && s[0] && s[1] && num == 1)
 		ret = ft_strdup(s[1]);
 	num = 0;
 	while (s && s[num])
