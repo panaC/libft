@@ -6,12 +6,11 @@
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/04 11:17:52 by pleroux           #+#    #+#             */
-/*   Updated: 2018/01/11 21:43:08 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/16 16:18:13 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <stdio.h>
 
 t_uint32			ft_atoi_hex(const char *str)
 {

@@ -6,14 +6,13 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 16:06:03 by pierre            #+#    #+#             */
-/*   Updated: 2018/01/15 17:59:20 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/01/16 16:17:46 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 #include <arg.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 t_bool			ft_setparam_doubleint(t_arg *a, t_string s, int *ptr, int data)
 {
