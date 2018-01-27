@@ -6,7 +6,7 @@
 #    By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/25 16:44:48 by pleroux           #+#    #+#              #
-#    Updated: 2017/12/20 10:44:17 by pierre           ###   ########.fr        #
+#    Updated: 2018/01/27 12:03:28 by pierre           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,9 @@ OBJ			= $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
 CC=gcc
 NAME=libft.a
 
-CFLAGS		= -Wall -Wextra -Werror -std=c99
+VAR_NOT_USED = -Wno-unused-but-set-parameter
+
+CFLAGS		= -Wall -Wextra -Werror -std=c99 $(VAR_NOT_USED)
 
 all: $(OBJ_DIR) $(NAME)
 
