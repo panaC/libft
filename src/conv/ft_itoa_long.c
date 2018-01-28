@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/28 00:09:35 by pierre            #+#    #+#             */
-/*   Updated: 2018/01/28 00:19:06 by pierre           ###   ########.fr       */
+/*   Updated: 2018/01/28 15:51:09 by pierre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ static int		len(unsigned long long int n)
 	int		len;
 
 	len = 0;
-	if (n <= 0)
-		len++;
 	while (n)
 	{
 		n /= 10;
@@ -38,11 +36,12 @@ char			*ft_itoa_long(long long int n)
 	nb = (unsigned long long int)n;
 	if (n < 0)
 		nb *= -1;
+	printf("  nb : %llu\n", nb);
 	l = len(nb);
 	if (!(ret = ft_strnew(l)))
 		return (NULL);
 	i = (int)l - 1;
-	while ((i && n < 0) || (n >= 0 && i >= 0))
+	while (i >= 0)
 	{
 		ret[i] = (nb % 10) + '0';
 		nb /= 10;
