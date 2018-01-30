@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_itoa_base_long.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/06 11:46:01 by pleroux           #+#    #+#             */
-/*   Updated: 2018/01/30 11:17:41 by pleroux          ###   ########.fr       */
+/*   Created: 2018/01/30 11:16:56 by pleroux           #+#    #+#             */
+/*   Updated: 2018/01/30 11:19:07 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-size_t		ft_intlen_base(unsigned int n, int base)
+static size_t		ft_intlen_base(unsigned long long int n, int base)
 {
 	size_t			i;
 
@@ -22,7 +22,7 @@ size_t		ft_intlen_base(unsigned int n, int base)
 	return (i);
 }
 
-char		*ft_itoa_base(unsigned int value, char *basestr)
+char		*ft_itoa_base_long(unsigned long long int value, char *basestr)
 {
 	size_t			size;
 	size_t			i;

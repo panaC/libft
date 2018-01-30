@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/28 00:09:35 by pierre            #+#    #+#             */
-/*   Updated: 2018/01/28 15:51:09 by pierre           ###   ########.fr       */
+/*   Updated: 2018/01/29 09:22:55 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ char			*ft_itoa_long(long long int n)
 	nb = (unsigned long long int)n;
 	if (n < 0)
 		nb *= -1;
-	printf("  nb : %llu\n", nb);
 	l = len(nb);
 	if (!(ret = ft_strnew(l)))
 		return (NULL);
