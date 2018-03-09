@@ -3,3 +3,6 @@
 *.test*
 *.a
 *.o
+.DS_Store
+.idea/*
+test/*
