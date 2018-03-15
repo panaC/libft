@@ -6,7 +6,7 @@
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/30 11:16:56 by pleroux           #+#    #+#             */
-/*   Updated: 2018/01/31 18:48:16 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/03/15 13:40:35 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ static size_t		ft_intlen_base(unsigned long long int n, int base)
 	return (i);
 }
 
-char		*ft_itoa_base_long(unsigned long long int value, char *basestr)
+char				*ft_itoa_base_long(unsigned long long int value,
+		char *basestr)
 {
 	size_t			size;
 	size_t			i;

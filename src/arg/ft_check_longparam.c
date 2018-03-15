@@ -6,7 +6,7 @@
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/09 15:41:36 by pleroux           #+#    #+#             */
-/*   Updated: 2018/01/16 16:17:39 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/02/15 11:00:10 by pierre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 #include <arg.h>
 #include <stdlib.h>
 
-static void		d(void *a, size_t s)
+#define UNUSED(...) (void)(__VA_ARGS__)
+
+static void		d(void *a, __attribute__((unused)) size_t s)
 {
-	s = 0;
 	free(a);
 }
 

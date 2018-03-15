@@ -4,3 +4,6 @@
 *.a
 *.o
 *.bak
+.DS_Store
+.idea/*
+test/*
