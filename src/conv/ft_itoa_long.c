@@ -6,7 +6,7 @@
 /*   By: pierre <pleroux@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/28 00:09:35 by pierre            #+#    #+#             */
-/*   Updated: 2018/01/29 09:22:55 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/03/15 14:09:38 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char			*ft_itoa_long(long long int n)
 	int						i;
 
 	nb = (unsigned long long int)n;
+	if (n == 0)
+		return (ft_strdup("0"));
 	if (n < 0)
 		nb *= -1;
 	l = len(nb);

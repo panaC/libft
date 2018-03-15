@@ -6,7 +6,7 @@
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 11:46:01 by pleroux           #+#    #+#             */
-/*   Updated: 2018/01/30 11:17:41 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/03/15 14:10:32 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char		*ft_itoa_base(unsigned int value, char *basestr)
 	size_t			base;
 	char			*tmp;
 
+	if (value == 0)
+		return (ft_strdup("0"));
 	base = ft_strlen(basestr);
 	size = ft_intlen_base(value, base);
 	if (!(tmp = (char*)ft_memalloc(sizeof(char) * size + 1)))
