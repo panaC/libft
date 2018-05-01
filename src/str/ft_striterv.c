@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isnum.c                                         :+:      :+:    :+:   */
+/*   ft_striterv.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 19:10:33 by pleroux           #+#    #+#             */
-/*   Updated: 2018/05/01 11:25:33 by pleroux          ###   ########.fr       */
+/*   Created: 2018/05/01 11:33:54 by pleroux           #+#    #+#             */
+/*   Updated: 2018/05/01 11:50:41 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int		ft_isnum(int c)
+t_bool		ft_striterv(char *s, int (*f)(int))
 {
-	if (ft_isdigit(c) || c == '-' || c == '+' || ft_isspace(c))
-		return (1);
-	return (0);
+	if (!s || !f)
+		return (FALSE);
+	while (*s)
+	{
+		if (!f(*s))
+			return (FALSE);
+		++s;
+	}
+	return (TRUE);
 }

@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isnum.c                                         :+:      :+:    :+:   */
+/*   ft_strnnbchr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 19:10:33 by pleroux           #+#    #+#             */
-/*   Updated: 2018/05/01 11:25:33 by pleroux          ###   ########.fr       */
+/*   Created: 2018/05/01 11:43:55 by pleroux           #+#    #+#             */
+/*   Updated: 2018/05/01 11:49:29 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include <libft.h>
 
-int		ft_isnum(int c)
+t_uint32		ft_strnnbchr(t_string s, size_t size, int c)
 {
-	if (ft_isdigit(c) || c == '-' || c == '+' || ft_isspace(c))
-		return (1);
-	return (0);
+	t_uint32	n;
+
+	n = 0;
+	while (s && *s && size)
+	{
+		++s;
+		--size;
+		if (*s == c)
+			++n;
+	}
+	return (n);
 }

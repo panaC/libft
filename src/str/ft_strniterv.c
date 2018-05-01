@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_shift_nb.c                                      :+:      :+:    :+:   */
+/*   ft_strniterv.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/18 17:42:47 by pleroux           #+#    #+#             */
-/*   Updated: 2018/04/18 17:43:51 by pleroux          ###   ########.fr       */
+/*   Created: 2018/05/01 11:36:33 by pleroux           #+#    #+#             */
+/*   Updated: 2018/05/01 11:51:09 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include <string.h>
+#include <libft.h>
 
-int		ft_shift_nb(const char *nptr)
+t_bool		ft_strniterv(char *s, size_t n, int (*f)(int))
 {
-	int			i;
-
-	i = 0;
-	if (!nptr)
-		return (0);
-	while (nptr[i] && ft_isspace((int)nptr[i]))
-		i++;
-	if (nptr[i] == '-')
-		i++;
-	else if (nptr[i] == '+')
-		i++;
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-		i++;
-	return (i);
+	if (!s || !f)
+		return (FALSE);
+	while (*s && n)
+	{
+		if (!f(*s))
+			return (FALSE);
+		++s;
+		--n;
+	}
+	return (TRUE);
 }

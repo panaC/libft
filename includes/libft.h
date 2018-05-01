@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2018/03/15 13:46:45 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/05/01 11:51:33 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,5 +113,11 @@ int					ft_nb_split(char const *s, char c);
 t_string			ft_strccat(t_string s, char c);
 int					ft_abs(int n);
 int					ft_len(int n);
+int					ft_strlennb(const char *nptr);
+t_bool				ft_striterv(char *s, int (*f)(int ));
+t_bool				ft_strniterv(char *s, size_t n, int (*f)(int));
+t_uint32			ft_strnbchr(t_string s, int c);
+t_uint32			ft_strnnbchr(t_string s, size_t size, int c);
+
 
 #endif
