@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_shift_nb.c                                      :+:      :+:    :+:   */
+/*   ft_lstfind.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/18 17:42:47 by pleroux           #+#    #+#             */
-/*   Updated: 2018/05/02 17:39:23 by pleroux          ###   ########.fr       */
+/*   Created: 2018/05/01 17:41:00 by pleroux           #+#    #+#             */
+/*   Updated: 2018/05/02 18:30:03 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <libft.h>
 
-int				ft_strlennb(const char *nptr)
+void		*ft_lstfind(t_list *lst, void *data,
+		void *(*f)(void *data_elem, void *data_comp))
 {
-	size_t		i;
-	int			ret;
+	t_list	*t;
+	void	*r;
 
-	i = 0;
-	ret = 0;
-	if (!nptr)
-		return (0);
-	while (nptr[i] && ft_isspace((int)nptr[i]))
-		++i;
-	if (nptr[i] == '-')
-		++i;
-	else if (nptr[i] == '+')
-		++i;
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	t = lst;
+	while (t)
 	{
-		++i;
-		++ret;
+		if ((r = f(t->content, data)))
+			return (r);
+		t = t->next;
 	}
-	while (nptr[i] && ft_isspace((int)nptr[i]))
-		++i;
-	if (i == ft_strlen(nptr))
-		return (ret);
-	return (-1);
+	return (NULL);
 }

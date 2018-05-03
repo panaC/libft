@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2018/05/01 14:20:37 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/05/02 17:38:35 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,8 @@ void				ft_lstaddstr(t_list **alst, t_string s);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_bool				ft_lststrfind(t_list *l, char **r, t_string s);
+void				*ft_lstfind(t_list *lst, void *data,
+						void *(*f)(void *data_elem, void *data_comp));
 void				ft_putlst(t_list *l);
 void				*ft_memdup(const void *mem, size_t size);
 int					ft_isspace(int c);
@@ -107,18 +109,17 @@ int					ft_atoi_base(const char *nptr, const char *base);
 t_uint32			ft_atoi_hex(const char *str);
 char				*ft_itoa_base(unsigned int value, char *basestr);
 char				*ft_itoa_base_long(unsigned long long int value,
-		char *basestr);
+						char *basestr);
 void				ft_print_memory(const void *addr, size_t size);
 int					ft_nb_split(char const *s, char c);
 t_string			ft_strccat(t_string s, char c);
 int					ft_abs(int n);
 int					ft_len(int n);
 int					ft_strlennb(const char *nptr);
-int				ft_strnlennb(const char *nptr, size_t n);
-t_bool				ft_striterv(char *s, int (*f)(int ));
+int					ft_strnlennb(const char *nptr, size_t n);
+t_bool				ft_striterv(char *s, int(*f)(int));
 t_bool				ft_strniterv(char *s, size_t n, int (*f)(int));
 t_uint32			ft_strnbchr(t_string s, int c);
 t_uint32			ft_strnnbchr(t_string s, size_t size, int c);
-
 
 #endif
