@@ -6,7 +6,7 @@
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/05 19:19:27 by pleroux           #+#    #+#             */
-/*   Updated: 2018/05/05 19:24:27 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/05/05 21:18:54 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void		*ft_lstpull(t_list **alst)
 		ret = (*alst)->content;
 		tmp = *alst;
 		*alst = (*alst)->next;
-		ft_memdel(&tmp);
+		ft_memdel((void**)&tmp);
 	}
 	return (ret);
 }
