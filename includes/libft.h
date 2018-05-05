@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2018/05/02 17:38:35 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/05/05 02:26:09 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,9 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_bool				ft_lststrfind(t_list *l, char **r, t_string s);
 void				*ft_lstfind(t_list *lst, void *data,
 						void *(*f)(void *data_elem, void *data_comp));
+void				ft_lstdelfind(t_list **lst, void *data,
+		void *(*f)(void *data_elem, void *data_comp),
+		void (*del)(void*, size_t));
 void				ft_putlst(t_list *l);
 void				*ft_memdup(const void *mem, size_t size);
 int					ft_isspace(int c);
