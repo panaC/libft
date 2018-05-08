@@ -6,7 +6,7 @@
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/05 19:13:12 by pleroux           #+#    #+#             */
-/*   Updated: 2018/05/05 19:18:37 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/05/05 22:23:49 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void		ft_lstcpy(t_list *src, t_list **dest)
 {
 	t_list	*node;
 
-	dest = NULL;
+	*dest = NULL;
 	while (src)
 	{
 		if (!(node = (t_list*)ft_memalloc(sizeof(*node))))
@@ -25,5 +25,6 @@ void		ft_lstcpy(t_list *src, t_list **dest)
 		node->content_size = src->content_size;
 		node->next = NULL;
 		ft_lstaddtoend(dest, node);
+		src = src->next;
 	}
 }
