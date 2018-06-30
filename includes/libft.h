@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2018/06/30 13:30:34 by pleroux          ###   ########.fr       */
+/*   Updated: 2018/06/30 13:43:20 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,11 +136,12 @@ t_bool				ft_strniterv(char *s, size_t n, int (*f)(int));
 t_uint32			ft_strnbchr(t_string s, int c);
 t_uint32			ft_strnnbchr(t_string s, size_t size, int c);
 t_string			ft_strtoupper(t_string s);
+t_string			ft_strdup_printable(const t_string str);
 
 /*
 ** secu directory
 */
 t_string			ft_unhexlify(t_string str);
-t_string			ft_hexlify(const t_string str);
+t_string			ft_hexlify(const t_string str, size_t nb);
 
 #endif
