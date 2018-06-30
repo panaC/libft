@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2018/06/29 17:23:30 by pierre           ###   ########.fr       */
+/*   Updated: 2018/06/30 09:37:36 by pierre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,6 +133,6 @@ t_string			ft_strdup_printable(const t_string str);
 ** secu directory
 */
 t_string			ft_unhexlify(t_string str);
-t_string			ft_hexlify(const t_string str);
+t_string			ft_hexlify(const t_string str, size_t nb);
 
 #endif
