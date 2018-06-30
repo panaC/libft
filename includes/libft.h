@@ -6,7 +6,7 @@
 /*   By: pleroux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:55 by pleroux           #+#    #+#             */
-/*   Updated: 2018/06/27 19:55:49 by pierre           ###   ########.fr       */
+/*   Updated: 2018/06/30 13:30:34 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,15 @@ typedef unsigned short	t_uint16;
 typedef unsigned int	t_uint32;
 typedef unsigned long	t_uint64;
 typedef char*			t_string;
+
+typedef union			u_uint
+{
+	char				v8;
+	short				v16;
+	int					v32;
+	long int			v64;
+	char				v[8];
+}						t_int;
 
 typedef struct		s_list
 {
