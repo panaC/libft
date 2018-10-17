@@ -1,6 +1,6 @@
 # 42 - LibFT
 
-Full C library from scratch for coding the Ainsi C original library.
+Full C library from scratch for coding the Ansi C original library.
 This is the first big project at 42 school.
 
 The aims of this project is the construction of own's C library as i could see
