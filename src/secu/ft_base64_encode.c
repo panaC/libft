@@ -6,7 +6,7 @@
 /*   By: pleroux <pleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/30 13:19:46 by pleroux           #+#    #+#             */
-/*   Updated: 2019/09/29 14:54:57 by pleroux          ###   ########.fr       */
+/*   Updated: 2019/09/29 15:00:04 by pleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@
 
 t_string		ft_base64_encode(const t_string encod)
 {
-	return (NULL);
+	return (encod);
 }
